@@ -95,7 +95,6 @@ export function ShotTable({ shots: initialShots, onUpdate }: ShotTableProps) {
           collisionDetection={closestCenter}
           onDragEnd={handleDragEnd}
         >
-          {/* @ts-expect-error React 19 type mismatch with dnd-kit */}
           <SortableContext
             items={shots.map((s) => s.id)}
             strategy={verticalListSortingStrategy}
