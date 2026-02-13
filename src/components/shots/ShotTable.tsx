@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   DndContext,
   closestCenter,
@@ -95,6 +95,7 @@ export function ShotTable({ shots: initialShots, onUpdate }: ShotTableProps) {
           collisionDetection={closestCenter}
           onDragEnd={handleDragEnd}
         >
+          {/* @ts-ignore — React 19 JSX type mismatch with dnd-kit */}
           <SortableContext
             items={shots.map((s) => s.id)}
             strategy={verticalListSortingStrategy}
